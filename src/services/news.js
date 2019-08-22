@@ -3,6 +3,7 @@ import {orderBy} from 'lodash';
 import {api_key, language, category, articles_url, country} from '../config/rest_config';
 
 export async function getArticles(){
+
   try{
     let articles = await fetch(`${articles_url}?category=${category}&country=${country}&language=${language}`,{
       headers:{
